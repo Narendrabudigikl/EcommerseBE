@@ -15,6 +15,11 @@ public class AuthController {
         this.userService = userService;
     }
 
+    @GetMapping("/check")
+    public String check(){
+        return "welcome";
+    }
+
     @PostMapping("/signup")
     public ResponseEntity<String> registerUser(@RequestBody Map<String, String> request) {
         String username = request.get("username");
